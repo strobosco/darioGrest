@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/darioGrest/static/css/main.9d5b29c0.chunk.css",
+    "main.js": "/darioGrest/static/js/main.00753a63.chunk.js",
+    "main.js.map": "/darioGrest/static/js/main.00753a63.chunk.js.map",
+    "runtime-main.js": "/darioGrest/static/js/runtime-main.14fa8bfc.js",
+    "runtime-main.js.map": "/darioGrest/static/js/runtime-main.14fa8bfc.js.map",
+    "static/js/2.35a2e57b.chunk.js": "/darioGrest/static/js/2.35a2e57b.chunk.js",
+    "static/js/2.35a2e57b.chunk.js.map": "/darioGrest/static/js/2.35a2e57b.chunk.js.map",
+    "static/js/3.be6b4104.chunk.js": "/darioGrest/static/js/3.be6b4104.chunk.js",
+    "static/js/3.be6b4104.chunk.js.map": "/darioGrest/static/js/3.be6b4104.chunk.js.map",
+    "index.html": "/darioGrest/index.html",
+    "static/css/main.9d5b29c0.chunk.css.map": "/darioGrest/static/css/main.9d5b29c0.chunk.css.map",
+    "static/js/2.35a2e57b.chunk.js.LICENSE.txt": "/darioGrest/static/js/2.35a2e57b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.14fa8bfc.js",
+    "static/js/2.35a2e57b.chunk.js",
+    "static/css/main.9d5b29c0.chunk.css",
+    "static/js/main.00753a63.chunk.js"
+  ]
+}
