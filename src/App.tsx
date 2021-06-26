@@ -1,25 +1,72 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import {
+  Box,
+  Heading,
+  Center,
+  Input,
+  Text,
+  Button,
+  NumberInput,
+  NumberInputField,
+} from "@chakra-ui/react";
+import { useState } from "react";
+import "./App.css";
 
 function App() {
+  const [numeroProva, setNumeroProva] = useState(0);
+  const [valoreDaInserire, setValoreDaInserire] = useState("");
+  const [answer, setAnswer] = useState("");
+  const [showAnswer, setShowAnswer] = useState(false);
+
+  const checkAnswer = () => {
+    if (numeroProva === 1 && parseInt(valoreDaInserire) === 3) {
+      setAnswer("link");
+      setShowAnswer(true);
+    } else {
+      setAnswer("errore");
+      setShowAnswer(true);
+    }
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Box>
+      <Center>
+        <Box top={10} w="50%" p={4}>
+          <Heading>
+            Ora inserirete prima il numero della vostra prova e poi la parola
+            magica!
+          </Heading>
+        </Box>
+      </Center>
+      <Box top={10} w="50%" p={4} m="auto">
+        <Text mb={4}>Inserire il numero della prova</Text>
+        <NumberInput
+          defaultValue={0}
+          onChange={(valueString) => setNumeroProva(parseInt(valueString))}
+          value={numeroProva}
+          min={0}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <NumberInputField />
+        </NumberInput>
+      </Box>
+      <Box top={10} w="50%" p={4} m="auto">
+        <Text mb={4}> Inserire la parola magica</Text>
+        <Input
+          onChange={(e) => setValoreDaInserire(e.target.value)}
+          value={valoreDaInserire}
+          placeholder="Dario"
+        ></Input>
+      </Box>
+      <Box top={10} w="50%" p={4} m="auto">
+        <Button colorScheme="blue" onClick={checkAnswer}>
+          Controlla i risultati!
+        </Button>
+      </Box>
+      {showAnswer ? (
+        <Box top={10} w="50%" p={4} m="auto">
+          {answer}
+        </Box>
+      ) : null}
+    </Box>
   );
 }
 
