@@ -18,7 +18,7 @@ function App() {
   const [showAnswer, setShowAnswer] = useState(false);
 
   const checkAnswer = () => {
-    if (numeroProva === 1 && parseInt(valoreDaInserire) === 3) {
+    if (numeroProva === 1 && valoreDaInserire === "a") {
       setAnswer("link");
       setShowAnswer(true);
     } else {
@@ -63,7 +63,7 @@ function App() {
       </Box>
       {showAnswer ? (
         <Box top={10} w="50%" p={4} m="auto">
-          {answer}
+          <Heading>{answer}</Heading>
         </Box>
       ) : null}
     </Box>
